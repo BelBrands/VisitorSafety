@@ -1,0 +1,196 @@
+html {
+    background: #e6e9e9;
+    background-image: linear-gradient(270deg, rgb(230, 233, 233) 0%, rgb(216, 221, 221) 100%);
+    -webkit-font-smoothing: antialiased;
+    }
+
+body {
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color: #545454;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2em 2em 4em;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    color: #222;
+    font-weight: 600;
+    line-height: 1.3;
+    }
+
+h2 {
+    margin-top: 1.3em;
+    color:darkred;
+    text-decoration: underline 
+    }
+
+h4 {
+    color: cornflowerblue;
+    }
+
+a {
+    color: #0083e8;
+    }
+
+b, strong {
+    font-weight: 600;
+    }
+
+samp {
+    display: none;
+    }
+
+img {
+    animation: colorize 2s cubic-bezier(0, 0, .78, .36) 1;
+    background: transparent;
+    border: 10px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: block;
+    margin: 1.3em auto;
+    max-width: 95%;
+}
+
+@keyframes colorize {
+    0% {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+        }
+    100% {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+        }
+    }
+
+
+#wrapper {
+    width: auto;
+    margin: 0 auto;
+    background: #fff;
+    padding: 5px;
+    border: 5px solid #aaa;
+    border-radius: 5px;
+    background-clip: padding-box;
+    text-align: left;
+    }
+
+.button {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    padding: 5px 10px;
+    border: 1px solid #aaa;
+    background-color: #eee;
+    background-image: linear-gradient(top, #fff, #f0f0f0);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    color: #666;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+  &:hover {
+    border-color: #999;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+  &:active {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  }
+}   
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+}
+  .cancel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+  }
+
+.popup {
+  margin: 10px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #666;
+  width: 700px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.8;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #666;
+}
+
+.HoverContainer {
+  position: relative;
+  width: 80%;
+}
+.HoverOverlay {
+  position: absolute;
+  top: -20px;
+  bottom: 0px;
+  left: 40px;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.HoverContainer:hover .HoverOverlay {
+  opacity: 1;
+}
+.HoverText {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+;
+}
+
+.HoverImage {
+  display:block;
+  width: 100%;
+  height: auto;
+}
+
+.signature {
+    border: 0;
+    border-bottom: 2px solid #000;
+    width: 50%;
+}
+
+.Title {
+    border: 1;
+    width: 20%;
+}
+
+.boxed {
+  border: 1px solid #808080 ;
+} 
